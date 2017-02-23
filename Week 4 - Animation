@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		#container 		{border: solid black 5px; border-radius: 10px; width: 400px; height: 400px; position: relative; background: pink;}		
+		#animate 		{border-radius: 100px; width: 50px; height: 50px; position: absolute; background-color: blue;}
+		body			{margin: 100px;}
+		button			{border-radius: 10px;}
+	</style>
+	<body>
+
+		<p>
+			<button onclick="myMove()">Click Me To Move!</button>
+		</p> 
+
+		<div id ="container">
+		<div id ="animate"></div>
+		</div>
+
+		<script>
+			function myMove() {
+				var elem = document.getElementById("animate");   
+				var pos = 2;
+				var id = setInterval(frame, 20);
+			function frame() {
+				if (pos == 350) {
+				clearInterval(id);
+				} else {
+					pos++; 
+					elem.style.top = pos + 'px'; 
+					elem.style.left = pos + 'px'; 
+				}
+			}
+		}
+		</script>
+
+	</body>
+</html>
