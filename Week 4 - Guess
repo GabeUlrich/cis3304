@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body		{margin: 50px; text-align: center; border-radius: 10px; border: solid black 5px;}
+		input		{width: 200px;}
+	</style>
+    <script>
+        var answer = Math.floor(Math.random() * 10) + 1;
+        var count = 0;
+        function guesses() {
+            var userGuess = parseInt(document.getElementById('guess').value);
+            if(userGuess===answer){
+                document.getElementById('result').innerHTML = "Correct in " + count + " tries";
+            } else if (userGuess < answer) {
+                document.getElementById('result').innerHTML = "Too Low";
+            } else {
+                document.getElementById('result').innerHTML = "Too High";
+            }
+            count++;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Gabe's Guessing Game</h1>
+    <p>Guess the number I am thinking of between <b>1</b> and <b>10</b>....</p>
+    <input id="guess" type="text" name="guessTF" placeholder="Guess between 1 and 10">
+    <button onclick="guesses()">Submit answer by clicking!</button>
+    <p id="result"></p>
+</body>
+
+</html>
