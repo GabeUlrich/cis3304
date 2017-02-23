@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body		{border-radius: 10px; text-align: center; border: dotted black 5px; margin: 50px;}
+		button		{border-radius: 10px;}
+		
+	</style>
+    <script>
+        function greeting() {
+            document.getElementById('h1Id').innerHTML
+                = "Awesome to meet you " + document.getElementById('nameId').value + "!";
+        }
+    </script>
+</head>
+
+<body>
+    <input id="nameId" type="text" name="name" placeholder="Enter Name">
+    <button onclick="greeting()">Click to say hello!</button>
+    <h1 id="h1Id"></h1>
+</body>
+
+</html>
