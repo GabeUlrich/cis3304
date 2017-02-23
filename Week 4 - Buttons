@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body 		{background-color: gray;}
+		#bod1		{margin-right: 50px; margin-left: 50px; margin-top: 50px; text-align: center; border-radius: 10px; 
+					border: solid black 10px;}
+    </style>
+    <script>
+        function redBG() {
+            var x = document.getElementById('bod1');
+            x.style.backgroundColor = 'Red';
+            x.style.color = 'white';
+            x.style.fontSize = '24px';
+        }
+        function greenBG() {
+            var x = document.getElementById('bod1');
+            x.style.backgroundColor = 'Green';
+            x.style.color = 'blue';
+            x.style.fontSize = '12px';
+        }
+        function blueBG() {
+            var x = document.getElementById('bod1');
+            x.style.backgroundColor = 'Blue';
+            x.style.color = 'black';
+            x.style.fontSize = '48px';
+        }
+    </script>
+</head>
+
+<body id="bod1">
+    <button onclick="redBG()">Red</button>
+    <button onclick="greenBG()">Green</button>
+    <button onclick="blueBG()">Blue</button>
+    <h1><marquee>Gabe's Awesome Page!</marquee></h1>
+
+</body>
+
+</html>
