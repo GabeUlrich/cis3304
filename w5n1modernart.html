@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 5 Modern Art by John Phillips</title>
+    <style>
+        body		{background-color: black;}
+		h1			{margin: 30px; text-align: center; color: white; font-family: goudy stout;}
+		p			{color: white; text-align: center;}
+		canvas		{border: solid black 3px; border-radius: 40px; background: #eee; display: block; margin: 0 auto;}}
+		div			{background-color: gold; border: solid gold 10px; margin-right: 250px; margin-left: 250px;}
+		
+		* 			{padding: 0; margin: 0;}
+        
+        
+    </style>
+</head>
+
+<body>
+	<div1>
+    <h1>Modern Art...</h1>
+	<p>By: Gabe Ulrich</p>
+	</div1>
+	<div>
+    <canvas id="myCanvas" width="1000" height="600"></canvas>
+	</div>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        function randomColor() {
+            var myRed = Math.floor((Math.random() * 255)) + 1;
+            var myGreen = Math.floor((Math.random() * 255)) + 1;
+            var myBlue = Math.floor((Math.random() * 255)) + 1;
+            return "rgb(" + myRed + "," + myGreen + "," + myBlue + ")";
+        }
+        function circle(ctx) {
+            var myRadius = Math.floor((Math.random() * 200) + 10);
+            var myX = Math.floor((Math.random() * 1000)) + 1;
+            var myY = Math.floor((Math.random() * 600)) + 1;
+            ctx.beginPath();
+            ctx.arc(myX, myY, myRadius, 0, Math.PI * 2, false);
+            ctx.fillStyle = randomColor();
+            ctx.fill();
+            ctx.closePath();
+        }
+        function rect(ctx) {
+            var myWidth = Math.floor((Math.random() * 300) + 10);
+            var myHeight = Math.floor((Math.random() * 100) + 10);
+            var myX = Math.floor((Math.random() * 1000)) + 1;
+            var myY = Math.floor((Math.random() * 600)) + 1;
+            ctx.beginPath();
+            ctx.rect(myX, myY, myWidth, myHeight);
+            ctx.fillStyle = randomColor();;
+            ctx.fill();
+            ctx.closePath();
+        }
+        for (i = 0; i < 50; i++) {
+            circle(ctx);
+            rect(ctx);
+        }
+        
+    </script>
+</body>
+
+</html>
